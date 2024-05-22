@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Available Slots</title>
+</head>
+<body>
+    <h1>Available Slots</h1>
+    <ul>
+        {% for slot in slots %}
+            <li>{{ slot.date }} - {{ slot.slots_available }} slots available - <a href="{% url 'book_slot' slot.id %}">Book</a></li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
